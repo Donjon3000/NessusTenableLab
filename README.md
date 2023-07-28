@@ -17,7 +17,7 @@ Kali Linux
 
 
 First install either virtualBox or VMware for the host machine that you will be running scans against. then intall Nesssus tenable right after
-
+![nessus and VB](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/e9b89860-b752-47bb-a294-f096ad7343ab)
 
 
 
