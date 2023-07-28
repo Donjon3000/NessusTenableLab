@@ -16,7 +16,7 @@ Kali Linux
 <h2> Walk-through:</h2>
 
 
-
+First install either virtualBox or VMware for the host machine that you will be running scans against. then intall Nesssus tenable right after
 
 
 
