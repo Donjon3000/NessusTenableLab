@@ -25,6 +25,31 @@ make sure to download a windows 10 iso file for the virtual machine aswell and s
 When setting up your vitrual machine make sure the network is set to Bridged adapter so that your local computer can connect to the Vitrual machine
 ![adapter2](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/bafc64b2-90d9-40e0-b214-3ca473de1f34)
 
+Once you have your vitrual machine and vulnerability scanner up and running the first thing we can do is aquire the ip address of the VM by clicking the search bar in the VM type command prompt and then type ipconfig
+![command 1](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/6485d4b2-c88e-4a27-a36e-68d2e1fadfb5)
+![admin1](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/9e23e946-109f-4d46-9a4a-306aa088ed14)
+
+Then take copy the ip address into your terminal and ping it so that you can establish a connection to the VM. If the session times out then disable the firewall on your VM then try again.
+![ping ip](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/1194b428-b065-4c88-bb42-685682474a75)
+![VM2](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/10d4d9bd-3726-4386-8856-49dea4bb2eff)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
