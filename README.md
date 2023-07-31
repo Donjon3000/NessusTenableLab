@@ -43,12 +43,72 @@ after setting up you can now start a new scan by pressing the play button and on
 Now we can look at what vulnerabilites that the Nessus scan mangaged to find as yuo can see since it was just a basic network scan there were not to many high risk vulnerabilites 
 ![basic scan results](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/f3031348-5535-4d2e-9b4e-00cc630c9501)
 
+you can still go through each vulnerability and check the details and remediations 
+![VM5](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/67bc9512-62a9-43d6-9fc8-4685febb8100)
 
+ Next step is to set up the vitural machine to accept credential scans. first thing we can do is to go back to the VM and open services.msc and enable the remote registry and allow the scanner to connect to the VMS registry and look for vulenrabilites
 
+![remote reg](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/afeb074c-2aa1-45b7-b764-a77e9f641ede)
 
+next go to your advanced sharing settings and turn on file and printer sharing
 
+![file printer](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/36f7c7be-c387-4a6f-be27-b49903bc9413)
 
+next go to user account control and set the bar to never notifiy and click ok.
 
+![VM7](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/7768fc73-f0d6-4950-b023-d4861960f156)
+
+final step is to open the registry editor and add a key that is supposed futher diable user account control. In this order go to local machine,software,microsoft,windows, current version, polices and finally system.
+
+![local machine](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/e1440194-fa3f-47c2-a400-0479d6b87b16)
+
+![localacc](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/da08c8f6-d324-480a-9364-3dda13401400)
+
+Then create a D-WORD by right clicking and type LocalAccountTokenFilterPolicy press enter and set the value to 1
+
+![local2](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/acbcca9b-edf5-4ba2-b1ed-0270eeda8578)
+
+next restart your virtual machine
+
+![restart](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/189e4744-2518-4cf2-a878-efd275503908)
+
+Now go back to nessus and click my scans and then click configure. now add windows credentials and set theauthenitcation method to password. use whatever name and password you created. click save then go back to my scans and click the play buttom to begin a new scan
+
+![configure 3](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/5227aded-36b4-4bae-b12e-c9280dcae16f)
+
+you should now get new results for vulnerabilites and can now compare from the previous scan
+
+![new scan 1](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/8c1bede5-7a45-4829-a685-004b20a4cb0b)
+
+let start now with some remedeitaions that we can implment by installing an older version of firefox and scanning it for any vulnerbilites 
+
+![firefox](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/cf0d586d-68ed-47d1-97ba-19724ac82043)
+
+make sure that you dowload firefox on your vitrual machine
+
+![firefox 2](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/5b4599b2-5992-458c-80f7-a8ec68d39c97)
+
+After installing firefox got back nessus and run a new scan. after scanning you can see that there more high criticals that were found in the last scan 
+
+![firefox scan](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/eddc2e27-d40d-4391-803e-3e1be67cc71b)
+
+go the the criticals and see what remmidtiations are recomended
+
+![firefoxscan3](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/595b7941-e871-4bef-bcdb-1559892d9d75)
+
+When can start practicing simple remmeditaitons by unistalling firefox and running windows updates 
+
+![unistall firefox](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/566808fb-27d7-4d5e-abcb-6655e529b24b)
+
+keeping running windows updates until theres no more updates. you might have to restart your VM a couple of times for the updates to complete.
+
+![windows update](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/489a5f79-121d-47fa-b202-3ae6332dd0f2)
+
+go back to nessus and conduct one final scan and see the changes in the scan compared to the previous one with firefox  
+
+![firefox unistall scan](https://github.com/Donjon3000/NessusTenableLab/assets/140426313/c8d5755b-95ff-4ec3-9a36-6634332b18e3)
+
+This is the core concept of vulnerability scanning which scanning and remediting any criticals. There is more to what nessus can do but this is just to show my knowlegde of using Nessus and practice to gain exeprince 
 
 
 
